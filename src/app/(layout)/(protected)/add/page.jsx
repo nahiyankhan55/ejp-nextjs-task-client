@@ -1,9 +1,11 @@
+import AddProductProvider from "./AddProductProvider";
+
 export const metadata = {
   title: "Add Product - E.martBD",
 };
 
 const AddProduct = () => {
-  return <div>AddProduct</div>;
+  return <AddProductProvider></AddProductProvider>;
 };
 
 export default AddProduct;
