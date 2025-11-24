@@ -36,7 +36,7 @@ const Navbar = () => {
         setNavShowHide(false);
       }}
     >
-      <div className="flex items-center gap-6 justify-between py-5 w-full sm:px-5 px-3 shadow-lg z-50 fixed bg-white/95">
+      <div className="flex items-center gap-6 justify-between max-w-[1440px] mx-auto py-5 w-full sm:px-5 px-3 shadow-lg z-50 fixed bg-white/95">
         <div className="relative text-xl flex gap-3 font-bold items-center">
           <div className="flex">
             <button className="lg:hidden text-2xl" onClick={navControl}>
