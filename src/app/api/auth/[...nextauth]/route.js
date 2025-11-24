@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions = {
   providers: [
@@ -20,6 +21,10 @@ export const authOptions = {
         return data.user;
       },
     }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_PROVIDER_ID,
+      clientSecret: process.env.GOOGLE_PROVIDER_SECRET,
+    }),
   ],
 
   session: { strategy: "jwt" },
@@ -39,6 +44,7 @@ export const authOptions = {
       return session;
     },
   },
+  secret: process.env.SECRET,
 };
 
 const handler = NextAuth(authOptions);

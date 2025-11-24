@@ -91,14 +91,14 @@ const RegisterProvider = () => {
             <TextField
               name="name"
               label="Name"
-              variant="outlined"
+              variant="filled"
               required
               className="w-full"
             />
             <TextField
               name="email"
               label="Email"
-              variant="outlined"
+              variant="filled"
               type="email"
               required
               className="w-full"
@@ -107,7 +107,7 @@ const RegisterProvider = () => {
           <TextField
             name="imageURL"
             label="Please Add a Direct Image URL"
-            variant="outlined"
+            variant="filled"
             className="w-full"
           />
           <div className="w-full relative">
@@ -115,7 +115,7 @@ const RegisterProvider = () => {
               name="password"
               type={showPassword ? "text" : "password"}
               label="Password"
-              variant="outlined"
+              variant="filled"
               required
               className="w-full"
             />

@@ -1,5 +1,11 @@
+import LoginProvider from "./LoginProvider";
+
+export const metadata = {
+  title: "Login to E.martBD",
+};
+
 const LoginPage = () => {
-  return <div>LoginPage</div>;
+  return <LoginProvider></LoginProvider>;
 };
 
 export default LoginPage;
