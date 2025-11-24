@@ -64,7 +64,7 @@ const HeaderSection = () => {
             <span className="opacity-50">
               <FaRegDotCircle></FaRegDotCircle>
             </span>
-            <span>🎮 Trusted Marketplace</span>
+            <span>🛒 Trusted Marketplace</span>
           </div>
         </div>
 
