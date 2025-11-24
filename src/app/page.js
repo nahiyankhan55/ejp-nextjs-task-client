@@ -2,6 +2,7 @@ import FeaturesSection from "@/components/Home/FeaturesSection";
 import HeaderSection from "@/components/Home/HeaderSection";
 import ProductsSection from "@/components/Home/ProductsSection";
 import TestimonialsSection from "@/components/Home/TestimonialsSection";
+import WeWorkWith from "@/components/Home/WeWorkWith";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <FeaturesSection></FeaturesSection>
       <ProductsSection></ProductsSection>
       <TestimonialsSection></TestimonialsSection>
+      <WeWorkWith></WeWorkWith>
     </div>
   );
 }
