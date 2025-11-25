@@ -1,9 +1,11 @@
+import ProductsProvider from "./ProductsProvider";
+
 export const metadata = {
   title: "All Products - E.martBD",
 };
 
 const Products = () => {
-  return <div>Products</div>;
+  return <ProductsProvider></ProductsProvider>;
 };
 
 export default Products;
