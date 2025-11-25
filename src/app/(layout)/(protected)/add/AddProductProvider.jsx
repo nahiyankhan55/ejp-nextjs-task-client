@@ -46,7 +46,7 @@ const AddProductProvider = () => {
       return;
     }
 
-    const res = await fetch("/products", {
+    const res = await fetch("http://localhost:6610/products", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
