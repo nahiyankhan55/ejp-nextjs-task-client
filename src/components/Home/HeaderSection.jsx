@@ -44,7 +44,7 @@ const HeaderSection = () => {
               onClick={handlePrimary}
               className="px-7 py-3 rounded-lg text-lg font-semibold bg-linear-to-r from-purple-700 to-purple-600 text-white hover:to-pink-700 cursor-pointer shadow-md hover:shadow-lg hover:scale-[1.02] transition"
             >
-              {session?.user ? "Browse Games" : "Get Started"}
+              {session?.user ? "Browse Products" : "Get Started"}
             </button>
 
             <button

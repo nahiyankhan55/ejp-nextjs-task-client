@@ -10,6 +10,7 @@
 
 - **Authentication**: Email/password login & Google OAuth
 - **Protected Pages**: `/add` and `/manage` accessible only to logged-in users
+- **Filter & Search**: Filtering and Searching products in all products page
 - **Secure Sessions**: JWT-based session handling via NextAuth
 - **Client-side Guard**: Redirects unauthenticated users
 - **Responsive UI**: Built with Tailwind CSS
