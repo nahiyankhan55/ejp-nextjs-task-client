@@ -1,9 +1,11 @@
+import ManageProductsProvider from "./ManageProductsProvider";
+
 export const metadata = {
   title: "Manage Products - E.martBD",
 };
 
 const ManageProducts = () => {
-  return <div>ManageProducts</div>;
+  return <ManageProductsProvider></ManageProductsProvider>;
 };
 
 export default ManageProducts;

@@ -42,7 +42,7 @@ const LoginProvider = () => {
 
   // Google Login
   const handleGoogleMethod = async () => {
-    const res = await signIn("google", { callbackUrl: "/callback" });
+    const res = await signIn("google", { callbackUrl: "/" });
   };
 
   return (
