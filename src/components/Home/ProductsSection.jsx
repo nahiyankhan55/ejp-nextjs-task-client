@@ -14,7 +14,9 @@ const ProductsSection = () => {
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        const res = await fetch("http://localhost:6610/latest/products");
+        const res = await fetch(
+          "https://ejp-nextjs-emartbd-server.vercel.app/latest/products"
+        );
         const data = await res.json();
         setProducts(data);
       } catch (error) {

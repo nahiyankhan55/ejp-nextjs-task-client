@@ -46,14 +46,17 @@ const AddProductProvider = () => {
       return;
     }
 
-    const res = await fetch("http://localhost:6610/products", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...product,
-        userEmail: session?.user?.email,
-      }),
-    });
+    const res = await fetch(
+      "https://ejp-nextjs-emartbd-server.vercel.app/products",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...product,
+          userEmail: session?.user?.email,
+        }),
+      }
+    );
 
     if (res.ok) {
       toast.success("Product added successfully");

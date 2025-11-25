@@ -7,14 +7,17 @@ export const authOptions = {
     CredentialsProvider({
       name: "Credentials",
       async authorize(credentials) {
-        const res = await fetch("http://localhost:6610/login", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email: credentials.email,
-            password: credentials.password,
-          }),
-        });
+        const res = await fetch(
+          "https://ejp-nextjs-emartbd-server.vercel.app/login",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: credentials.email,
+              password: credentials.password,
+            }),
+          }
+        );
 
         const data = await res.json();
         if (!res.ok) return null;

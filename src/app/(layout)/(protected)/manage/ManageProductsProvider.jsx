@@ -24,13 +24,12 @@ const ManageProductsProvider = () => {
   const router = useRouter();
 
   const { data: session } = useSession();
-  console.log(session.user.email);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const res = await fetch(
-          `http://localhost:6610/products/user/${session.user.email}`
+          `https://ejp-nextjs-emartbd-server.vercel.app/products/user/${session?.user.email}`
         );
         const data = await res.json();
         setProducts(data);
@@ -42,7 +41,7 @@ const ManageProductsProvider = () => {
     };
 
     fetchProducts();
-  }, []);
+  }, [session]);
 
   useEffect(() => {
     AOS.init();
@@ -61,9 +60,12 @@ const ManageProductsProvider = () => {
 
     if (confirm.isConfirmed) {
       try {
-        const res = await fetch(`http://localhost:6610/products/${id}`, {
-          method: "DELETE",
-        });
+        const res = await fetch(
+          `https://ejp-nextjs-emartbd-server.vercel.app/products/${id}`,
+          {
+            method: "DELETE",
+          }
+        );
         if (res.ok) {
           setProducts(products.filter((p) => p._id !== id));
           Swal.fire("Deleted!", "Product has been deleted.", "success");
